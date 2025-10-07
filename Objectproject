@@ -4,30 +4,53 @@
 
 public class Pet {
     // Attributes
-    private String name;
-    private String type;
-    private int energy;
+    String name;
+    String type;
+    int energy;
 
-    //  The Constructor
+    // Constructor to initialize attributes
     public Pet(String name, String type) {
         this.name = name;
         this.type = type;
-        this.energy = 100; // default energy level
+        this.energy = 100;  // default energy level
     }
 
-    // Behavior (method) (Changes the attributes)
-    public void play(String activity) {
-        System.out.println(name + " the " + type + " is playing: " + activity);
-        
+    // Behavior that changes the attributes
+    public void play() {
         if (energy >= 10) {
-            energy -= 10;
+            energy -= 10;  // playing reduces energy by 10
+            System.out.println(name + " the " + type + " played and now has " + energy + " energy.");
         } else {
-            System.out.println(name + " is too tired to play.");
+            System.out.println(name + " the " + type + " is too tired to play.");
         }
     }
 
-    // Method to display pet's current status
-    public void displayStatus() {
+    // Method to display current attributes
+    public void showStatus() {
         System.out.println("Name: " + name + ", Type: " + type + ", Energy: " + energy);
     }
+
+    // Main method to create and use objects
+    public static void main(String[] args) {
+        // Create three Pet objects
+        Pet pet1 = new Pet("Rex", "Dog");
+        Pet pet2 = new Pet("Mittens", "Cat");
+        Pet pet3 = new Pet("Nemo", "Fish");
+
+        // Show initial status
+        pet1.showStatus();
+        pet2.showStatus();
+        pet3.showStatus();
+
+        // Use the behavior to change attributes
+        pet1.play();
+        pet2.play();
+        pet3.play();
+
+        // Show status after playing
+        pet1.showStatus();
+        pet2.showStatus();
+        pet3.showStatus();
+    }
 }
+
