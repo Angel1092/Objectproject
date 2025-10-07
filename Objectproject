@@ -1,6 +1,6 @@
-Name: Angel Guerra
-Date: 10/7/2025
-Teacher: Mr.Gross
+// Angel Guerra (angel.guerra@malad.us)
+// For CTE Software Development 1
+// Instructor: Mr. Gross
 
 public class Pet {
     // Attributes
@@ -8,14 +8,14 @@ public class Pet {
     private String type;
     private int energy;
 
-    // Constructor
+    //  The Constructor
     public Pet(String name, String type) {
         this.name = name;
         this.type = type;
         this.energy = 100; // default energy level
     }
 
-    // Behavior (method) that changes the attributes
+    // Behavior (method) (Changes the attributes)
     public void play(String activity) {
         System.out.println(name + " the " + type + " is playing: " + activity);
         
